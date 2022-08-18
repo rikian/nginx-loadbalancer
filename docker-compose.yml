@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  lb:
+    image: nginxapp
+    ports:
+      - "8080:8080"
+  nodeapp1:
+    image: nodeapp
+    environment:
+      - PORT=1111
+  nodeapp2:
+    image: nodeapp
+    environment:
+      - PORT=2222
+  nodeapp3:
+    image: nodeapp
+    environment:
+      - PORT=3333
+  nodeapp4:
+    image: nodeapp
+    environment:
+      - PORT=4444
